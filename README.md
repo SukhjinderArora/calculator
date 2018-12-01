@@ -1,4 +1,4 @@
-# Simple Boilerplate for JavaScript Applications
+# JavaScript Calculator
 
 ## How to Use?
 

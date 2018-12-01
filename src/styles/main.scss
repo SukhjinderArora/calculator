@@ -1,6 +1,5 @@
-@import 'header';
-
-body {
-  text-align: center;
-  // background-image: url('../assets/logo-og.png');
-}
+@import 'base';
+@import 'grid';
+@import 'button';
+@import 'display';
+@import 'calculator';
