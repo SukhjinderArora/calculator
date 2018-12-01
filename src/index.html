@@ -7,11 +7,11 @@
     <title>JavaScript Boilerplate</title>
   </head>
   <body>
-    <main>
       <div class="calculator">
 
         <div class="display">
-          <input type="text" readonly class="display__input">
+          <input type="text" readonly class="display__input" value="14558">
+          <input type="text" readonly class="display__input" value="14558">
         </div>
         
         <div class="buttons">
@@ -21,7 +21,7 @@
               <button class="btn btn--ac">AC</button>
             </div>
             <div class="col-1-of-4">
-              <button class="btn btn--divide">/</button>
+              <button class="btn btn--divide btn--op">/</button>
             </div>
           </div>
 
@@ -36,7 +36,7 @@
               <button class="btn btn--9">9</button>
             </div>
             <div class="col-1-of-4">
-              <button class="btn btn--mutliply">&times;</button>
+              <button class="btn btn--mutliply btn--op">&times;</button>
             </div>
           </div>
 
@@ -51,7 +51,7 @@
               <button class="btn btn--6">6</button>
             </div>
             <div class="col-1-of-4">
-              <button class="btn btn--subtract">-</button>
+              <button class="btn btn--subtract btn--op">-</button>
             </div>
           </div>
 
@@ -66,24 +66,23 @@
               <button class="btn btn--6">3</button>
             </div>
             <div class="col-1-of-4">
-              <button class="btn btn--subtract">+</button>
+              <button class="btn btn--add btn--op">+</button>
             </div>
           </div>
 
           <div class="row">
             <div class="col-2-of-4">
-              <button class="btn btn--4">0</button>
+              <button class="btn btn--0">0</button>
             </div>
             <div class="col-1-of-4">
-              <button class="btn btn--5">.</button>
+              <button class="btn btn--decimal">.</button>
             </div>
             <div class="col-1-of-4">
-              <button class="btn btn--6">=</button>
+              <button class="btn btn--equal">=</button>
             </div>
           </div>
 
         </div>
       </div>
-    </main>
   </body>
 </html>
