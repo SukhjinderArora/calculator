@@ -1,4 +1,7 @@
 @import 'mixin';
 @import 'base';
 @import 'grid';
-@import 'calculator';
+
+@import 'components/calculator';
+@import 'components/display';
+@import 'components/button';

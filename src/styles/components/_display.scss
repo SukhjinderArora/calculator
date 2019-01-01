@@ -1,7 +1,5 @@
 .display {
   background: #484848; 
-  border-radius: 3px;
-  padding-top: 5px;
   
   &__input {
     display: block;
@@ -10,7 +8,15 @@
     border: 0;
     background: transparent;
     text-align: right;
-    padding: 0.5rem 1rem;
+    padding: 0.8rem 1rem;
     color: rgba(255, 255, 255, 0.75);
+
+    &--large {
+      font-size: 2.4rem;
+    }
+
+    &--small {
+      font-size: 2rem;
+    }
   }
 }
