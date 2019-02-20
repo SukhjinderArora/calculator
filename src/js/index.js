@@ -1,31 +1,27 @@
 import '@babel/polyfill';
 
-import '../styles/main.scss';
 import elements from './base';
-import * as calcModel from './calcModel';
-import * as calcView from './calcView';
+import * as calculator from './calculator';
 
-let value = '';
+let input = [];
 
-function getResult() {
-  const expression = calcModel.getData();
-  return calcModel.evalExpression(expression);
-}
-
-function btnClickHandler(event) {
-  if (this.classList.contains('btn--equal')) {
-    value = getResult();
-    calcModel.clearData();
-    calcModel.addData(value);
-  } else if (this.classList.contains('btn--ac')) {
-    calcModel.clearData();
-    calcView.clearInput();
-    value = '';
+const btnHandler = (event) => {
+  if (event.target.dataset.value === '=') {
+    const inputString = input.join('');
+    if (inputString !== '') {
+      const result = calculator.getResult(inputString);
+      calculator.setInput(result);
+      input = [];
+      if (result !== 'Invalid Expression') input.push(result);
+    }
+  } else if (event.target.dataset.value === 'ac') {
+    input = [];
+    calculator.clearInput();
   } else {
-    calcModel.addData(this.dataset.value);
-    value += this.dataset.value;
+    input.push(event.target.dataset.value);
+    const inputString = input.join('');
+    calculator.setInput(inputString);
   }
-  calcView.setInput(value);
-}
+};
 
-elements.buttons.forEach(btn => btn.addEventListener('click', btnClickHandler));
+elements.buttons.forEach(btn => btn.addEventListener('click', btnHandler));

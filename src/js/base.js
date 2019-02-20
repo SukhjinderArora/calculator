@@ -1,8 +1,6 @@
 const elements = {
   buttons: document.querySelectorAll('.btn'),
-  btnEqual: document.querySelector('.btn--equal'),
-  btnAc: document.querySelector('.btn--ac'),
-  inputLower: document.querySelector('.display__input--small'),
+  input: document.querySelector('.input-js'),
 };
 
 export default elements;

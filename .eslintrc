@@ -10,7 +10,7 @@
   },
   "rules": {
     "comma-dangle": "warn",
-    "no-console": "error",
+    "no-console": "off",
     "no-unused-vars": [
       "error",
       {
